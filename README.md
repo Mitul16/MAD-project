@@ -6,6 +6,6 @@ Mitul varshney<br>
 Aditya Verma<br>
 Parv Chaudhary<br>
 We choose Theme 1<br>
-The basic prblem we are trying to sole is to imporve human health,both physical and mental<br>
+The basic problem we are trying to solve is to improve human health,both physical and mental<br>
 <img src="https://github.com/Mitul16/MAD-project/blob/main/Screenshot_1617887815.png">
 <img src="https://github.com/Mitul16/MAD-project/blob/main/Screenshot_1617890393.png">
