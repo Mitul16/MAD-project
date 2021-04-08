@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:path_provider/path_provider.dart';
 
+
 import 'package:mad_app/about_page.dart';
+import 'package:mad_app/mental_health.dart';
 
 String appDirPath;
 
@@ -97,7 +99,7 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             Text(
               "This is the app data directory : ${appDirPath ?? 'error : not found'}" +
-              "\nWe can save our configs and other data in the form of JSON here",
+                  "\nWe can save our configs and other data in the form of JSON here",
 
               textAlign: TextAlign.center,
             ),
@@ -114,7 +116,7 @@ class _HomePageState extends State<HomePage> {
             ),
 
             // within "onTap" function, we can change our current stack to push and/or pop pages
-            
+
             ListTile(
               title: Text(
                 'Option 1',
@@ -137,13 +139,18 @@ class _HomePageState extends State<HomePage> {
             ),
             ListTile(
               title: Text(
-                'Option 3',
+                'Mental Health',
                 style: TextStyle(
                   fontSize: 20,
                   fontFamily: 'Comfortaa',
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                context,
+                CupertinoPageRoute(builder: (context) => MentalHealth()),
+              );},
             ),
             ListTile(
               title: Text(
