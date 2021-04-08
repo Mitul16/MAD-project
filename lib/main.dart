@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:path_provider/path_provider.dart';
 
+import 'package:mad_app/about_page.dart';
+
 String appDirPath;
 
 void main() {
@@ -9,7 +11,7 @@ void main() {
 
   getAppDirPath().then((path) {
     appDirPath = path;
-    runApp(App());
+    runApp(MyApp());
   });
 }
 
@@ -17,7 +19,7 @@ Future<String> getAppDirPath() async {
   return (await getApplicationSupportDirectory()).path;
 }
 
-class App extends StatelessWidget {
+class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -151,7 +153,13 @@ class _HomePageState extends State<HomePage> {
                   fontFamily: 'Comfortaa',
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  CupertinoPageRoute(builder: (context) => AboutPage()),
+                );
+              },
             ),
           ],
         ),
